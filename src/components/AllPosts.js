@@ -28,10 +28,10 @@ export const AllPostsList = () => {
             return (
                 <div id="post_card">
                     <div id="post_card_title" key={postObj.Id} >{postObj.title}</div>
-
-                    <div id="post_card_topic">{postObj.topic.topicName}</div>
+                    <div className="card_btm_wrapper">
+                    <div id="post_card_topic"><p>Posted In: <span className="italics">{postObj.topic.topicName}</span></p></div>
                     <div id="post_card_likes">{likeCount} Likes</div>
-
+                    </div>
 
 
                 </div>
