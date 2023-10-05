@@ -2,6 +2,9 @@ body {
     background-color: #a980f6;
 }
 
+option {
+color: white;
+}
 .posts {
     display: flex;
     flex-direction: column;
