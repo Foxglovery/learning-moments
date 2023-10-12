@@ -1,0 +1,57 @@
+.posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    margin-top: 30px;
+    
+}
+#post_card {
+    display: flex;
+    flex-direction: column;
+    border: 1px blue solid;
+    height: 7rem;
+    width: 50%;
+    padding: 20px;
+    background: linear-gradient(#1ebaad, #6b75e7);
+   
+    border-radius: 20px;
+    -webkit-box-shadow:0px 0px 137px 44px rgba(255,232,84,0.5);
+-moz-box-shadow: 0px 0px 137px 44px rgba(255,232,84,0.5);
+box-shadow: 0px 0px 137px 44px rgba(255,232,84,0.5);
+
+
+    
+
+}
+#post_card_title {
+    
+    display: flex;
+    justify-content: center;
+    
+}
+
+.card_btm_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: auto;
+    
+
+}
+
+#post_card_topic {
+    display: flex;
+   
+  
+}
+
+.italics {
+    font-style: italic;
+}
+
+#post_card_likes {
+    display: flex;
+    justify-content: flex-end;
+    
+}
