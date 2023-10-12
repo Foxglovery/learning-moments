@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 import "./NewPost.css";
 import { NewPostDropdownSearch } from "../dropdown/NewPostDropdown";
 import { addNewPost } from "../../services/postService";
@@ -8,6 +8,7 @@ import { addNewPost } from "../../services/postService";
 export const NewPost = ({ currentUser, allPosts }) => {
   const [post, setPost] = useState({})
   const [newTopicId, setNewTopicId] = useState(0)
+  const navigate = useNavigate()
 
   
   const handleSave = (event) => {
@@ -30,7 +31,9 @@ export const NewPost = ({ currentUser, allPosts }) => {
     }
     setPost(newPost)
     //call post funct on newPost
-    addNewPost(newPost)
+    addNewPost(newPost).then(() => {
+      navigate(`/myPosts`)
+    })
   //  NAVIGATE FUNCTIONALITY GOES HERE TO MYPOSTS
   }
   

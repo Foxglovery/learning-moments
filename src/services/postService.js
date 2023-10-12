@@ -26,6 +26,16 @@ export const addNewPost = (post) => {
   })
 }
 
+export const deletePost = async (postId) => {
+  const url = `http://localhost:8088/posts/${postId}`;
+
+  const deleteOptions = {
+      method: "DELETE",
+  };
+
+  await fetch(url, deleteOptions);
+}
+
 // what I had before
 // export const getPostById = (postId) => {
 //   return fetch(`http://localhost:8088/posts?id=${postId}&_expand=like&_expand=user&_expand=topic`).then(
